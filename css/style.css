@@ -94,6 +94,14 @@ ol li
 #welcome H1
 { font: normal 200% times, Helvetica, sans-serif;
   color: #FFF;}
+
+#welcome a {
+	text-decoration: none;
+}
+
+#title_H a {
+	color: white;
+}
   
 span
 { color: #03AFF7;}

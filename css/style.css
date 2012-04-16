@@ -159,6 +159,10 @@ span
   margin: 0 auto;
   padding: 20px 0 0 0;
   background: #FFF;} 
+
+#tablediv {
+	float: left;
+}
   
 .sidebar_container
 { float: right;
@@ -197,6 +201,36 @@ span
 .sidebar_item.home a:hover {
   text-decoration: none;
   background-color: #EFEFEF;
+}
+
+#sidebar_unscheduled
+{	
+	background-color: green;	
+}
+
+#sidebar_in_progress
+{	
+	background-color: yellow;	
+}
+
+#sidebar_unstarted
+{	
+	background-color: #FF9933;	
+}
+
+.table_unscheduled
+{	
+	background-color: green;	
+}
+
+.table_in_progress
+{	
+	background-color: yellow;	
+}
+
+.table_unstarted
+{	
+	background-color: #FF9933;	
 }
 
 .sidebar h4

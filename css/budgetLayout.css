@@ -1,0 +1,97 @@
+
+
+#leftovers{
+	width: 70px; 
+	height: 325px; 
+	background: #03AFF7;
+	
+}
+#time{
+	width: 70px;
+	height: 500px;
+	border:2px solid #778899; 
+	float: right;
+	position: relative;	
+}
+
+.timebar{
+	width: 70px;
+	height: 2px;
+	position:relative;
+}
+.Untimebar{
+	width:70px;
+	height:0px;
+	position:relative;
+}
+
+
+
+#expense1{
+	height:150px;
+	width: 70px;
+	background: #D3D3D3;	
+}
+
+#expense2{
+	height:25px;
+	width: 70px;
+	background: #A9A9A9;
+}
+
+#expense3{
+	height:0px;
+	width: 70px;
+	background: #D3D3D3;
+}
+
+
+#moneyLabels{
+	float:left;
+	width:50px;
+	height: 100px;
+	margin:0;
+	padding:0;
+	
+}
+
+#monthLabels{
+	float:right;
+	width: 50px;
+	height:100px;
+	margin:0;
+	padding:0;
+	
+}
+#pictureHolder{
+	margin: 0 50px;
+	width:300px;
+}
+
+#money{
+	font-size: 10px;
+	font-family: Arial;
+
+}
+#months{
+	font-size: 10px;
+	font-family: Arial;
+}
+
+#budgetimage{
+	margin:0;
+	padding:0;
+}
+
+#navigation table{
+	width:100%
+}
+
+#navigation input{
+	width:100%
+}
+
+#content{
+	background-color:gray;
+}
+

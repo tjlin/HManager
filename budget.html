@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<!--
+
+  
+-->
+<html>
+
+
+
+<head>
+<title>HManager</title>
+<meta name="description" content="Building Management Application" />
+<meta name="keywords" content="hmanager, 6.813" />
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/budgetLayout.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/image_slide.js"></script>
+<script type="text/javascript" src="js/budget.js"></script>
+</head>
+
+
+<body>
+<div id="main">
+<div id="header">
+<div id="welcome">
+<h1 id=title_H><a href='index.html'>H</a><a href='index.html'><span>MANAGER</span></a></h1>
+</div>
+<!--end welcome-->
+<div id="menubar">
+<div class="menu">
+<ul>
+	<li><a href=''>View Budget</a></li>
+	<li><a href='status.html'>Building Status</a></li>
+	<li><a href=''>Projects</a></li>
+	<li><a href=''>View Student Requests</a></li>
+</ul>
+</div>
+<!-- end menu; comment out the whole menu thing to hide it from the !home pages -->
+</div>
+<!--end menubar--></div>
+<!--end header-->
+
+<div id="site_content">
+
+<table id="mainTable">
+	<tr>
+		<td id="budgetimage" style="z-index: 100">
+		<div id="moneyLabels">
+		<table id="money">
+			<tr>
+				<td align="right" style="padding-bottom: 33px">$10000</td>
+			</tr>
+			<tr>
+				<td align="right" style="padding-bottom: 33px">$9000</td>
+			</tr>
+			<tr>
+				<td align="right" style="padding-bottom: 33px">$8000</td>
+			</tr>
+			<tr>
+				<td align="right" style="padding-bottom: 33px">$7000</td>
+			</tr>
+			<tr>
+				<td align="right" style="padding-bottom: 33px">$6000</td>
+			</tr>
+			<tr>
+				<td align="right" style="padding-bottom: 33px">$5000</td>
+			</tr>
+			<tr>
+				<td align="right" style="padding-bottom: 33px">$4000</td>
+			</tr>
+			<tr>
+				<td align="right" style="padding-bottom: 33px">$3000</td>
+			</tr>
+			<tr>
+				<td align="right" style="padding-bottom: 33px">$2000</td>
+			</tr>
+			<tr>
+				<td align="right" style="padding-bottom: 33px">$1000</td>
+			</tr>
+			<tr>
+				<td align="right" style="padding-bottom: 33px">$0</td>
+			</tr>
+
+		</table>
+		</div>
+		<div id="monthLabels">
+		<table id="months">
+			<tr>
+				<td align="left" style="padding-bottom: 29px">Jan</td>
+			</tr>
+			<tr>
+				<td align="left" style="padding-bottom: 29px">Feb</td>
+			</tr>
+			<tr>
+				<td align="left" style="padding-bottom: 29px">Mar</td>
+			</tr>
+			<tr>
+				<td align="left" style="padding-bottom: 29px">Apr</td>
+			</tr>
+			<tr>
+				<td align="left" style="padding-bottom: 29px">May</td>
+			</tr>
+			<tr>
+				<td align="left" style="padding-bottom: 29px">Jun</td>
+			</tr>
+			<tr>
+				<td align="left" style="padding-bottom: 29px">Jul</td>
+			</tr>
+			<tr>
+				<td align="left" style="padding-bottom: 29px">Aug</td>
+			</tr>
+			<tr>
+				<td align="left" style="padding-bottom: 29px">Sep</td>
+			</tr>
+			<tr>
+				<td align="left" style="padding-bottom: 29px">Oct</td>
+			</tr>
+			<tr>
+				<td align="left" style="padding-bottom: 29px">Nov</td>
+			</tr>
+			<tr>
+				<td align="left" style="padding-bottom: 30px">Dec</td>
+			</tr>
+		</table>
+		</div>
+		<div id="pictureHolder"><canvas id="pointers" width="400"
+			height="400"
+			style="top:0px; left:0px; position:absolute; pointer-events:none "></canvas>
+		<div id=budgetBar style="float: left">
+		<div id="expense1" class="tip" title="$3000.00 water damage"></div>
+		<div id="expense2" class="tip" title="$500.00 new furniture"></div>
+		<div id="expense3" class="tip" title="$1000.00 new copier"></div>
+		<div id="leftovers" class="tip" title='Money Left:: $xx'></div>
+		</div>
+		<div id=time>
+		<div id="time1" class="timebar" style="top: 30px; background: #D3D3D3"></div>
+		<div id="time2" class="timebar" style="top: 50px; background: #A9A9A9"></div>
+		<div id="time3" class="Untimebar"
+			style="top: 70px; background: #D3D3D3"></div>
+		</div>
+
+
+		</div>
+
+
+		</td>
+
+		<td id="recentexp" style="padding-left: 175px">
+		<h2>Budget for 2012</h2>
+		<h3>Recent Expenditures</h3>
+		<TABLE cellspacing=0 cellpadding=2>
+			<COL width=100>
+			<COL width=150>
+			<COL width=200>
+			<tr>
+				<th width=100 bgcolor="lightgrey">Date</th>
+				<th width=150 bgcolor="lightgrey">Cost</th>
+				<th width=200 bgcolor="lightgrey">Description</th>
+			</tr>
+		</TABLE>
+		<div
+			style="overflow: auto; width: 450px; height: 300; border-left: 1px gray solid; border-bottom: 1px gray solid; padding: 0px; margin: 0px">
+		<TABLE cellspacing=0 cellpadding=2 id="recentTable">
+			<COL WIDTH=100>
+			<COL WIDTH=150>
+			<COL WIDTH=200>
+			<tr>
+				<td width=100 valign="top" align="center"
+					style="padding-bottom: 15px">01/15/12</td>
+				<td width=150 valign="top" align="center">$3000.00</td>
+				<td width=200 valign="top" align="center">water damage</td>
+			</tr>
+			<tr>
+				<td width=100 valign="top" align="center"
+					style="padding-bottom: 15px">02/05/12</td>
+				<td width=150 valign="top" align="center">$500.00</td>
+				<td width=200 valign="top" align="center">new furniture</td>
+			</tr>
+			<tr>
+				<td width=100 valign="top" align="center"
+					style="padding-bottom: 15px">02/16/12</td>
+				<td width=150 valign="top" align="center">$1000.00</td>
+				<td width=200 valign="top" align="center">new copier</td>
+			</tr>
+		</TABLE>
+		</div>
+		<button id="download">Download as Spreadsheet</button>
+		</td>
+	</tr>
+
+</table>
+
+
+</div>
+<!--end site_content--></div>
+<!--end main-->
+
+<div id="footer">
+<div id="footer_container">
+<div class="footer_container_box"></div>
+<!--close footer_container_box-->
+<div class="footer_container_box"></div>
+<!--close footer_container_box-->
+<div class="footer_container_boxl"></div>
+<!--close footer_container_box1--> <br style="clear: both" />
+<br />
+
+</div>
+</div>
+<!--close footer-->
+
+<div style="margin: 1em 0 3em 0; text-align: center;"><span>A
+6.813 Design Project - 2012</span></div>
+
+
+</body>
+
+</html>
+
+
+
+
+

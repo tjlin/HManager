@@ -20,7 +20,7 @@
       <div id="menubar">
 		<div class="menu"> 
 		    <ul> 
-		        <li><a href=''>View Budget</a></li> 
+		        <li><a href='budget.html'>View Budget</a></li> 
 		        <li><a href='status.html'>Building Status</a></li> 
 			<li><a href=''>Projects</a></li>
 			<li><a href=''>View Student Requests</a></li>
@@ -30,7 +30,73 @@
     </div><!--end header-->
     
 	<div id="site_content">	
-		<h1>Building Status page coming soon.</h1>
+		<h1>Building <span>Status</span></h1>
+		<!--<canvas id=bldgcnvs width=400 height=400></canvas>		-->
+		<div id=tablediv>
+			<table border=1>
+			  <tbody>
+			    <!-- Results table headers -->
+    				<tr>
+				      <th>Projects</th>
+					<th>Progress</th>
+				      <th>Progress</th>
+				      <th>Floor</th>
+				</tr>
+				<tr>
+				      <td class=table_unscheduled></td>
+					<td class=table_unstarted></td>
+				      <td class=table_unscheduled></td>
+					<td class=table_unscheduled></td>
+				      <td>5</td>
+				</tr>
+				<tr>
+				      <td class=table_in_progress></td>
+					<td class=table_unstarted></td>
+				      <td class=table_unscheduled></td>
+					<td class=table_unscheduled></td>
+				      <td>4</td>
+				</tr>
+				<tr>
+				      <td class=table_unscheduled></td>
+					<td class=table_unstarted></td>
+				      <td class=table_in_progress></td>
+					<td class=table_in_progress></td>
+				      <td>3</td>
+				</tr>
+				<tr>
+				      <td class=table_in_progress></td>
+					<td class=table_unstarted></td>
+				      <td class=table_unscheduled></td>
+					<td class=table_unscheduled></td>
+				      <td>2</td>
+				</tr>
+				<tr>
+				      <td class=table_unscheduled></td>
+					<td class=table_unstarted></td>
+				      <td class=table_unscheduled></td>
+					<td class=table_unscheduled></td>
+				      <td>1</td>
+				</tr>
+			 </tbody>
+			</table>
+		</div> <!-- End Table div -->
+		<div class="sidebar_container">       
+			<div class="sidebar">
+          			<div id=sidebar_unscheduled class="sidebar_item_home">
+            				<h2><a href=''>No Active Projects</a></h2>
+          			</div><!--close sidebar_item--> 
+       			 </div><!--close sidebar-->     		
+			<div class="sidebar">
+         			<div id=sidebar_in_progress class="sidebar_item_home">
+           				<h2><a href='status.html'>Projects in Progress</a></h2>
+            			</div><!--close sidebar_item--> 
+        		</div><!--close sidebar-->   
+        		<div class="sidebar">
+          			<div id=sidebar_unstarted class="sidebar_item_home">
+           				<h2><a href=''>Unstarted Projects</a></h2>
+            			</div><!--close sidebar_item--> 
+        		</div><!--close sidebar-->
+       		</div><!--close sidebar_container-->	
 	  
     
 	</div><!--end site_content-->

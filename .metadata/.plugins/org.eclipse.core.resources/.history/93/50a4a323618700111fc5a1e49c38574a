@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+<title>HManager</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="jquery.multiselect.css" />
+<script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="jquery.tablesorter.js"></script>
+<script src="jquery-ui-1.8.18.custom.min.js"></script>
+<script src="jquery.tablesorter.widgets.js"></script>
+<script src="jquery.multiselect.min.js"></script>
+
+
+</head>
+<body>
+	<div id="menu" style="background-color: #FFFFFF; float: left;">
+		<table id="CurrentProjects" class="tablesorter">
+			<thead>
+				<tr>
+					<th>Cost</th>
+					<th>Start Date</th>
+					<th>Estimated Completion Date</th>
+					<th>Floor</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>3,000</td>
+					<td>01/24/12</td>
+					<td>04/01/12</td>
+					<td>2, 4</td>
+					<td>Leak and Water Damage</td>
+				</tr>
+				<tr>
+					<td>2,500</td>
+					<td>01/22/12</td>
+					<td>04/05/12</td>
+					<td>2, 4</td>
+					<td>Leak and Water Damage</td>
+				</tr>
+
+				<tr>
+					<td>5,000</td>
+					<td>01/26/12</td>
+					<td>04/03/12</td>
+					<td>2, 4</td>
+					<td>Leak and Water Damage</td>
+				</tr>
+
+				<tr>
+					<td>1,000</td>
+					<td>01/22/12</td>
+					<td>04/01/12</td>
+					<td>2, 4</td>
+					<td>Leak and Water Damage</td>
+				</tr>
+				<tr>
+					<td>2,000</td>
+					<td>01/22/12</td>
+					<td>04/24/12</td>
+					<td>2, 4</td>
+					<td>Leak and Water Damage</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+	<div id="content" style="float: right;">
+		Add New Project
+		<p>
+		<form>
+			Floor*: <select id="floors" multiple class="dropdownchecklist">
+				<option value="5">5</option>
+				<option value="4">4</option>
+				<option value="3">3</option>
+				<option value="2">2</option>
+				<option value="1">1</option>
+			</select> <br /> Start Date: <input type="text" name="startdate" /></br>
+			Completion Date*: <input type="text" name="completiondate" /></br> Cost:
+			$<input type="text" name="cost" /></br> Description*: <input type="text"
+				name="description"></br> <input type="checkbox" name="email"
+				value="Email Residents"> Email Residents<br> <input
+				type="submit" value="Add Project" />
+
+		</form>
+	</div>
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$("#CurrentProjects").tablesorter({
+				sortList: [[2,0]],  
+				widgets : [ "resizable" ]
+			});
+			$("#floors").multiselect({
+				 header: "Choose a Floor"
+			});
+		});
+	</script>
+
+</body>
+</html>
+
+
+
+<!-- box: create div = box that holds stuff, with css, you can change things. -->
+<!-- create form (http://www.w3schools.com/html/html_forms.asp) use line -->
+<!-- breaks -->
+<!-- </br> -->
+<!-- to put things in new line -->
+
+
+

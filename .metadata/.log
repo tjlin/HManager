@@ -1,0 +1,87 @@
+!SESSION 2012-04-13 14:13:07.303 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.mylyn.tasks.ui 2 0 2012-04-13 14:13:54.069
+!MESSAGE No search provider was registed. Tasks search is not available.
+
+!ENTRY org.eclipse.ui 4 4 2012-04-13 14:13:56.595
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.TaskList.
+
+!ENTRY org.eclipse.ui 4 4 2012-04-13 14:15:44.342
+!MESSAGE Part already exists in page layout: org.eclipse.ui.navigator.ProjectExplorer.
+
+!ENTRY collabode.plugin 4 0 2012-04-13 16:23:38.761
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in collabode.Activator.stop() of bundle collabode.plugin.
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:791)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:510)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:565)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1160)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:595)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:690)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:597)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:390)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+Caused by: java.lang.RuntimeException: No such task threadpool: dbwriter_infreq
+	at net.appjet.ajstdlib.execution$$anonfun$3.apply(ajstdlib.scala:182)
+	at net.appjet.ajstdlib.execution$$anonfun$3.apply(ajstdlib.scala:182)
+	at scala.collection.Map$class.getOrElse(Map.scala:63)
+	at scala.collection.mutable.HashMap.getOrElse(HashMap.scala:33)
+	at net.appjet.ajstdlib.execution$.scheduleTaskInPool(ajstdlib.scala:182)
+	at net.appjet.ajstdlib.execution.scheduleTaskInPool(ajstdlib.scala)
+	at collabode.Workspace.scheduleTask(Workspace.java:147)
+	at collabode.Plugin.cleanup(Plugin.java:62)
+	at collabode.Activator.stop(Activator.java:39)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:771)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:764)
+	... 19 more
+Root exception:
+java.lang.RuntimeException: No such task threadpool: dbwriter_infreq
+	at net.appjet.ajstdlib.execution$$anonfun$3.apply(ajstdlib.scala:182)
+	at net.appjet.ajstdlib.execution$$anonfun$3.apply(ajstdlib.scala:182)
+	at scala.collection.Map$class.getOrElse(Map.scala:63)
+	at scala.collection.mutable.HashMap.getOrElse(HashMap.scala:33)
+	at net.appjet.ajstdlib.execution$.scheduleTaskInPool(ajstdlib.scala:182)
+	at net.appjet.ajstdlib.execution.scheduleTaskInPool(ajstdlib.scala)
+	at collabode.Workspace.scheduleTask(Workspace.java:147)
+	at collabode.Plugin.cleanup(Plugin.java:62)
+	at collabode.Activator.stop(Activator.java:39)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:771)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:764)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:510)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:565)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1160)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:595)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:690)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:597)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:390)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
